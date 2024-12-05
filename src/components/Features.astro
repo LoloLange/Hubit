@@ -1,0 +1,58 @@
+---
+import bulb from '../assets/features/bulb.svg'
+import Clock from '../assets/features/clock.astro'
+import Checklist from '../assets/features/checklist.astro'
+import task from '../assets/features/task.avif'
+import example from '../assets/features/example.avif'
+import activity from '../assets/features/activity.avif'
+import Image from 'astro/components/Image.astro'
+
+const newFeature = [
+    {
+        color: '#F28A6B',
+        icon: Clock,
+        title: 'Real time updates',
+        description: 'Real-time updates are critical feature in various software applications and platforms.'
+    },
+    {
+        color: 'dimgray',
+        icon: Checklist,
+        title: 'Project coordination',
+        description: 'Real-time updates are critical feature in various software applications and platforms.'
+    },
+]
+---
+
+<section class="my-10 py-6 bg-warm mx-4 px-8 rounded-[20px]">
+    <p class="flex items-center text-lg gap-x-1 bg-white w-fit border-2 border-gray-100 shadow-sm py-1 px-3 rounded-full"><Image src={bulb} alt="Bulb" class="size-5" />New Feature</p>
+    <p class="text-[26px] leading-snug font-bold mt-5">All in one platform for enhanced control</p>
+    <p class="pr-5 mt-3">This innovative concept strives to streamline operations to the providing users with heightened efficiency and convenience by eliminating the need to navigate.</p>
+    <div class="mt-10 flex flex-col gap-y-10 pr-5">
+        {
+            newFeature.map((n) => (
+                <div class="flex flex-col gap-y-3">
+                    {
+                        n.icon === Checklist ? (
+                            <div class="size-14 p-3 rounded-full shadow-sm select-none pointer-events-none" style={{ background: n.color }}>
+                                <Checklist />
+                            </div>
+                        ) : (
+                            <div class="size-14 p-3 rounded-full shadow-sm select-none pointer-events-none" style={{ background: n.color }}>
+                                <Clock />
+                            </div>
+                        )
+                    }
+                    <p class="font-semibold">{n.title}</p>
+                    <p>{n.description}</p>
+                </div>
+            ))
+        }
+    </div>
+    <div class="mt-10 flex flex-col w-full gap-y-3 select-none pointer-events-none">
+        <div class="flex items-end justify-center gap-x-3">
+            <Image class="w-28 shadow-sm" src={task} alt="Running task" />
+            <Image class="w-44 shadow-sm" src={example} alt="Task visualization example" />
+        </div>
+        <Image class="shadow-sm" src={activity} alt="Activity" />
+    </div>
+</section>

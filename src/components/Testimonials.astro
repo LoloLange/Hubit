@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import star from '../assets/testimonials/star.astro'
+import Star from '../assets/testimonials/star.astro';
+
+const testimonials = [
+    {
+        photo: "https://randomuser.me/api/portraits/men/22.jpg",
+        name: "Robert Fox",
+        position: "Lead Data Scientist, BitComp",
+        opinion: "Hubit has revolutionized the way we manage tasks. The intuitive interface and seamless task organization have made our workflow smoother than ever."
+    },
+    {
+        photo: "https://randomuser.me/api/portraits/men/85.jpg",
+        name: "Esther Howard",
+        position: "CEO, CodeWrights",
+        opinion: "Thanks to Hubit, our team's productivity has skyrocketed. The features and real-time updates help us to be everyone on the same page. We've cut down unnecesasary meetings and in emails, allowing us to focus."
+    },
+    {
+        photo: "https://randomuser.me/api/portraits/men/64.jpg",
+        name: "Albert Flores",
+        position: "Director, DataSystems LLC",
+        opinion: "Hubit has revolutionized the way we manage tasks. The intuitive interface and seamless task organization have made our workflow smoother than ever."
+    },
+    {
+        photo: "https://randomuser.me/api/portraits/men/34.jpg",
+        name: "Jacob Jones",
+        position: "Product Manager, Leap Labs",
+        opinion: "Thanks to Hubit, our team's productivity has skyrocketed. The features and real-time updates help us to be everyone on the same page. We've cut down unnecesasary meetings and in emails, allowing us to focus."
+    },
+]
+---
+
+<section class="flex flex-col items-center py-10 bg-warm mx-5 rounded-[50px]">
+    <p class="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]">
+      Reviews from people
+    </p>
+    <p class="text-3xl font-bold text-center my-10 px-5">
+        Trusted by 23,000+ happy customers
+      </p>
+    <div class="flex flex-col gap-y-5">
+        {
+            testimonials.map((t) => (
+                <div class="flex flex-col gap-y-3 bg-white p-7 rounded-xl mx-5 border-2 border-gray-100 shadow-sm">
+                    <div class="flex gap-x-3 items-center">
+                        <img class="size-14 rounded-full select-none pointer-events-none" src={t.photo} alt={t.name + "photo"} />
+                        <div>
+                            <p class="font-semibold">{t.name}</p>
+                            <p class="text-gray-500 pr-5">{t.position}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 pr-5 leading-relaxed">"{t.opinion}"</p>
+                    <div class="flex gap-x-2 select-none pointer-events-none">
+                        <Star />
+                        <Star />
+                        <Star />
+                        <Star />
+                        <Star />
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

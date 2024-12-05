@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import Join from "./Join.astro";
+import logo from '../assets/logo.png'
+---
+<footer class="pb-10">
+    <Join />
+    <section class="m-8 border-b-2 border-gray-100 pt-5 pb-12">
+        <p class="font-semibold text-xl">Get exclusive 10% discount when you join our newsletter</p>
+        <p class="mt-2">Seize the moment and don't miss this exclusive opportunity</p>
+        <input type="email" class="mt-5 w-full text-lg bg-gray-300 text-gray-800 placeholder:text-gray-800 py-2 px-3 rounded-2xl" placeholder="email@provider.com"/>
+        <button class="w-full px-5 py-3 rounded-2xl bg-black text-white shadow-md mt-3 font-semibold text-lg">Get 10% discount
+        </button>
+    </section>
+    <section class="mx-8 flex flex-col gap-y-6">
+        <Image src={logo} alt="Hubit logo" />
+        <div class="flex flex-col gap-y-3 font-semibold text-lg">
+            <p>Contact</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+        </div>
+    </section>
+</footer>

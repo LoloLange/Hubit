@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import arrow from '../assets/hero/arrow-right.svg';
+
+import google from '../assets/companies/google.svg'
+import figma from '../assets/companies/figma.svg'
+import notion from '../assets/companies/notion.svg'
+import shopify from '../assets/companies/shopify.svg'
+import slack from '../assets/companies/slack.svg'
+
+import heroImg from '../assets/hero/hero-img.avif'
+
+import TrustedCompanies from '../components/TrustedCompanies.astro';
+---
+
+<section class="mt-2 bg-warm pt-10 rounded-[50px]">
+    <div class="relative select-none pointer-events-none">
+        <Image class="size-12 bg-white rounded-full border-[1px] p-2.5 absolute object-scale-down left-4" src={google} alt="Google logo" />
+        <Image class="size-12 bg-white rounded-full border-[1px] p-2.5 absolute object-scale-down right-4 top-3" src={figma} alt="Figma logo" />
+        <Image class="size-12 bg-white rounded-full border-[1px] p-2.5 absolute object-scale-down left-4 top-56" src={slack} alt="Slack logo" />
+        <Image class="size-12 bg-white rounded-full border-[1px] p-2.5 absolute object-scale-down right-4 top-60" src={shopify} alt="Shopify logo" />
+        <Image class="size-12 bg-white rounded-full border-[1px] p-2.5 absolute object-scale-down right-4 top-80" src={notion} alt="Notion logo" />
+    </div>
+    <div class="flex flex-col justify-center items-center gap-y-4">
+        <p class="border-gray-200 border-[1px] w-fit px-4 py-1 rounded-full bg-white shadow-sm">#1 task management app</p>
+        <p class="font-semibold text-[34px] leading-snug text-center px-14">Boost your productivity with intuitive task management app.</p>
+        <div class="mt-3 flex flex-col items-center gap-y-5">
+            <button class="border-gray-200 border-[1px] w-fit px-5 py-3 rounded-2xl bg-white text-lg shadow-md flex gap-x-1 items-center">Book a free demo 
+                <Image src={arrow} alt="arrow right" class="size-5 mt-0.5 select-none">
+            </button>
+            <button class="border-gray-200 border-[1px] w-fit px-5 py-3 rounded-2xl bg-black text-white text-lg shadow-md">Start 14 Days Free Trial 
+            </button>
+        </div>
+    </div>
+    <Image class="px-10 mt-10 select-none pointer-events-none" src={heroImg} alt="Hero image" />
+</section>
+<TrustedCompanies />

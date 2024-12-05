@@ -1,0 +1,55 @@
+---
+import Image from 'astro/components/Image.astro';
+import progress from '../assets/more-features/progress.avif';
+import tasks from '../assets/more-features/tasks.avif';
+
+import user1 from '../assets/more-features/user1.png';
+import user2 from '../assets/more-features/user2.png';
+import user3 from '../assets/more-features/user3.png';
+
+import message from '../assets/more-features/message.svg'
+import file from '../assets/more-features/file.svg'
+
+import { MoreFeaturesMarquee } from './MoreFeaturesMarquee'
+---
+
+<section class="flex flex-col items-center mx-5 pt-3">
+    <p class="border-2 border-gray-100 bg-warm py-1 px-3 w-fit rounded-full">More features</p>
+    <p class="text-3xl font-bold text-center my-8">Unlock key features to achieve higher productivity</p>
+    <div class="flex flex-col gap-y-8">
+        <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 shadow-sm">
+            <p class="font-semibold text-2xl">Create unlimited tasks</p>
+            <p>Progress tracking is a crucial feature in a task management app as it allows users.</p>
+            <Image class="shadow-md select-none pointer-events-none rounded-xl" src={tasks} alt="Tasks" />
+        </div>
+
+        <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 relative shadow-sm">
+            <p class="font-semibold text-2xl">Collaborate on tasks</p>
+            <div class="bg-white shadow-sm rounded-xl my-2 p-5 w-full h-[220px] select-none pointer-events-none">
+                <Image class="w-36 absolute top-26" src={user1} alt="user1" />
+                <Image class="w-36 absolute right-14 top-44" src={user2} alt="user2" />
+                <Image class="w-36 absolute left-16 top-56" src={user3} alt="user3" />
+            </div>
+            <div class="flex gap-x-3 justify-end text-gray-600 text-sm">
+                <p class="flex items-center gap-x-1"><Image class="size-6" src={message} alt="message" />12 comments</p>
+                <p class="flex items-center gap-x-1"><Image class="size-6" src={file} alt="file" />0 files</p>
+            </div>
+        </div>
+
+        <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 shadow-sm">
+            <Image class="shadow-sm flex select-none pointer-events-none rounded-xl" src={progress} alt="progress bars" />
+            <p class="font-semibold text-2xl mt-3">Progress Tracking</p>
+            <p>Progress tracking is a crucial feature in a task management app as it allows users.</p>
+        </div>
+
+        <div class="bg-warm border-[1px] border-gray-100 rounded-xl flex flex-col items-center justify-center gap-y-3 shadow-sm w-[calc(100vw-40px)] overflow-hidden">
+            <div class="">
+                <MoreFeaturesMarquee />
+            </div>
+            <div class="p-8 border-t-2 border-gray-100">
+                <p class="font-semibold text-2xl">Seamless integration</p>
+            <p>Seamless integration is a crucial aspect of a task management app, enhancing it's functionality and user experience.</p>
+            </div>
+        </div>
+    </div>
+</section>

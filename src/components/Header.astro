@@ -1,0 +1,10 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import icon from '../assets/hero/hamburger-icon.svg'
+---
+
+<header class="h-20 flex justify-between items-center p-5 select-none">
+    <Image class="pointer-events-none" src={logo} alt="hubit logo" />
+    <Image src={icon} alt="hamburguer icon" />
+</header>

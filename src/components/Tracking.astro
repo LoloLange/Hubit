@@ -1,0 +1,33 @@
+---
+import profile from '../assets/tracking/profile.avif';
+import profileProg from '../assets/tracking/profile-progress.avif';
+import { Image } from 'astro:assets';
+import Check from '../assets/tracking/check.astro';
+
+const checks = ["Task progress visualization", "Project milestones", "Checklists and subtasks", "Time tracking integration", "Progress history"]
+
+---
+
+<section class="py-10 bg-warm mx-5 px-7 mt-10 rounded-[50px]">
+    <p class="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]">Track everything</p>
+    <p class="text-3xl font-bold mt-3">Monitor workflow with progress tracking</p>
+    <p class="mt-3 pr-5">This innovative concept strives to streamline operations to the providing users with heightened efficiency and convenience by eliminating the need to navigate.</p>
+    <div class="flex flex-col gap-y-5 mt-5">
+    {
+        checks.map((c) => (
+            <div class="flex gap-x-2 items-center">
+                <div class="bg-coral size-7 p-1.5 rounded-full select-none pointer-events-none flex items-center justify-center">
+               <Check />
+                </div>
+                <p class="font-semibold pb-1">{c}</p>
+            </div>
+        ))
+    }
+    </div>
+    <button class="border-gray-200 border-[1px] w-fit px-5 py-3 rounded-2xl bg-black text-white shadow-md mt-5">Start 14 Days Free Trial 
+    </button>
+    <div class="flex flex-col mt-10 gap-y-3 px-7 select-none pointer-events-none">
+        <Image src={profile} alt="Profile example" />
+        <Image src={profileProg} alt="Profile progress visualization example" />
+    </div>
+</section>

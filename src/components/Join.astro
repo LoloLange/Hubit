@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets'
+import coralCircle from '../assets/footer/coral-circle.avif'
+import grayCircle from '../assets/footer/gray-circle.avif'
+---
+<section class="bg-[#201E1C] text-white p-5 mt-7 py-12 text-center flex flex-col gap-y-3 items-center mx-5 rounded-[50px] relative overflow-hidden">
+    <p class="font-bold text-3xl z-30">Join Hubit for free today</p>
+    <p class="px-5 leading-relaxed z-30">Welcome to a new era of seamless task management. Join Hubit for free today and embark on a journey towards enhanced productivity</p>
+    <button class="w-fit px-5 py-3 rounded-2xl bg-white text-black shadow-md mt-2 z-30">Start 14 Days Free Trial 
+    </button>
+    <Image class="absolute size-20 -top-10 left-10 z-20" src={coralCircle} alt="coral circle" />
+    <Image class="absolute top-0 z-10 top-7" src={grayCircle} alt="gray circle" />
+</section>

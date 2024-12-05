@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets'
+import bolt from '../assets/how-it-works/bolt.svg'
+import user from '../assets/how-it-works/user.svg'
+import sparkle from '../assets/how-it-works/sparkle.svg'
+
+const steps = [
+    {
+        icon: bolt,
+        title: 'Create Free Account',
+        description: 'Elevate your efficiency and streamline your workflow by downloading our innovative app.',
+    },
+    {
+        icon: user,
+        title: 'Invite Team Members',
+        description: 'Elevate your efficiency and streamline your workflow by downloading our innovative app.',
+    },
+    {
+        icon: sparkle,
+        title: 'Instanstly Improve Workflow',
+        description: 'Elevate your efficiency and streamline your workflow by downloading our innovative app.',
+    },
+]
+
+---
+
+<section class="px-8 mt-8">
+    <p class="text-3xl text-center font-semibold">Start improving productivity with just 3 steps</p>
+    <div class="flex flex-col gap-y-8 mt-10">
+        {
+            steps.map((s) => (
+                <div class="flex flex-col pl-5">
+                    <Image src={s.icon} alt={s.title} class="size-14 bg-[#FAF9F8] rounded-xl border-2 border-gray-100 shadow-sm p-2 select-none pointer-events-none" />
+                    <p class="text-lg font-bold mt-4">{s.title}</p>
+                    <p class="w-[250px] mt-2">{s.description}</p>
+                </div>
+            ))
+        }
+    </div>
+</section>
