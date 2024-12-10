@@ -1,0 +1,2 @@
+*.astro linguist-language=Astro
+*.jsx linguist-detectable=false
