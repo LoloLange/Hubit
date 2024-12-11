@@ -10,6 +10,10 @@ export default {
 			colors: {
 				'warm': '#FAF9F8',
 				'coral': '#F28A6B'
+			},
+			screens: {
+				'3xl': '1800px',
+				'4xl': '2000px',
 			}
 		},
 	},

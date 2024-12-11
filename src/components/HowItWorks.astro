@@ -24,15 +24,15 @@ const steps = [
 
 ---
 
-<section class="px-8 mt-8">
-    <p class="text-3xl text-center font-semibold">Start improving productivity with just 3 steps</p>
-    <div class="flex flex-col gap-y-8 mt-10">
+<section class="px-8 sm:px-20 md:px-0 flex flex-col items-center mt-8 xl:mt-14">
+    <p class="text-3xl 3xl:text-4xl text-center font-semibold">Start improving productivity with just 3 steps</p>
+    <div class="flex max-md:flex-col md:flex-row md:justify-around lg:justify-center gap-8 md:gap-2 min-[950px]:gap-8 lg:gap-10 xl:gap-16 2xl:gap-28 w-full mt-10 xl:mt-16 md:mb-5 min-[500px]:px-8 xl:text-lg">
         {
             steps.map((s) => (
                 <div class="flex flex-col pl-5">
-                    <Image src={s.icon} alt={s.title} class="size-14 bg-[#FAF9F8] rounded-xl border-2 border-gray-100 shadow-sm p-2 select-none pointer-events-none" />
-                    <p class="text-lg font-bold mt-4">{s.title}</p>
-                    <p class="w-[250px] mt-2">{s.description}</p>
+                    <Image src={s.icon} alt={s.title} class="size-14 xl:size-20 bg-[#FAF9F8] rounded-xl border-2 border-gray-100 shadow-sm p-2 xl:p-3 select-none pointer-events-none" />
+                    <p class="text-lg xl:text-xl 3xl:text-2xl font-bold mt-4">{s.title}</p>
+                    <p class="w-[250px] sm:w-[350px] md:w-[200px] min-[850px]:w-[250px] xl:w-[300px] mt-2">{s.description}</p>
                 </div>
             ))
         }

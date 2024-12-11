@@ -1,4 +1,12 @@
 import { useState } from "react";
+
+interface Plans {
+  name: string;
+  price: string;
+  isFirst: boolean;
+  isPopular: boolean;
+  features: string[];
+}
 export const Pricing = () => {
   const [isOn, setIsOn] = useState(false);
 
@@ -6,7 +14,7 @@ export const Pricing = () => {
     setIsOn((prevState) => !prevState);
   };
 
-  const plans = [
+  const plans: Plans[] = [
     {
       name: "Basic",
       price: !isOn ? "49" : "99",
@@ -46,14 +54,14 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center py-10">
+    <section className="flex flex-col items-center py-16">
       <p className="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]">
         Pricing & Plans
       </p>
-      <p className="text-3xl font-bold text-center my-5 px-5">
+      <p className="text-3xl lg:text-4xl font-bold text-center my-5 lg:my-8 px-5">
         Explore and choose the perfect plan for your needs
       </p>
-      <div className="flex items-center my-1">
+      <div className="flex items-center my-2 lg:my-4">
         <span className="mr-2">Monthly</span>
         <div
           className={`relative inline-flex items-center cursor-pointer bg-gray-200 rounded-full w-12 h-6 border-2 border-gray-300`}
@@ -68,24 +76,27 @@ export const Pricing = () => {
         </div>
         <span className="ml-2">Yearly</span>
       </div>
-      <div className="flex flex-col gap-y-6 px-5 mt-5">
+      <div className="flex max-md:flex-col md:flex-row gap-6 xl:gap-10 px-5 mt-5">
         {plans.map((p) => (
-          <div key={p.name} className="border-2 border-gray-200 bg-white rounded-2xl w-[calc(100vw-5rem)]">
+          <div
+            key={p.name}
+            className="border-2 border-gray-200 bg-white rounded-2xl max-md:w-[calc(100vw-5rem)] flex flex-col"
+          >
             <div className="flex flex-col gap-y-1 bg-gray-100 p-3 border-b-2 rounded-t-2xl border-gray-200 relative py-5">
-              <p className="font-semibold text-gray-700">{p.name}</p>
+              <p className="font-semibold text-gray-700 xl:text-xl">{p.name}</p>
               {p.isPopular && (
                 <p className="border-2 border-gray-200 bg-warm py-1.5 px-3 w-fit rounded-full absolute top-2 right-2 text-sm shadow-sm">
                   Most popular
                 </p>
               )}
-              <p className="text-3xl font-bold mt-1">${p.price}</p>
+              <p className="text-3xl xl:text-4xl font-bold mt-1">${p.price}</p>
               <p className="text-gray-600 text-sm">
                 per user / {!isOn ? "month" : "year"}
               </p>
             </div>
             <div className="flex flex-col gap-y-3 mb-2 mt-1 p-5">
               {!p.isFirst && (
-                <span className="text-xs text-gray-500">
+                <span className="text-xs xl:text-sm text-gray-500">
                   everything included in the previous plan plus...
                 </span>
               )}
@@ -106,17 +117,14 @@ export const Pricing = () => {
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M5 12l5 5l10 -10" />
                   </svg>
-                  <p className="text-sm">{f}</p>
+                  <p className="text-sm xl:text-base">{f}</p>
                 </div>
               ))}
             </div>
-            <div className="px-5 flex flex-col gap-y-3 my-3">
-              <button className="border-gray-200 border-[1px] py-2.5 rounded-2xl bg-black text-white shadow-md w-full">
+            <div className="px-5 md:px-3 lg:px-5 flex flex-col gap-y-3 mt-auto my-6">
+              <button className="border-gray-200 border-[1px] py-2.5 rounded-2xl md:rounded-lg xl:rounded-2xl bg-black text-white shadow-md w-full">
                 Start 30 Days Free Trial
               </button>
-              <p className="text-sm text-gray-500 font-light">
-                No credit card required
-              </p>
             </div>
           </div>
         ))}

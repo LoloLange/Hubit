@@ -23,36 +23,38 @@ const newFeature = [
 ]
 ---
 
-<section class="my-10 py-6 bg-warm mx-4 px-8 rounded-[20px]">
-    <p class="flex items-center text-lg gap-x-1 bg-white w-fit border-2 border-gray-100 shadow-sm py-1 px-3 rounded-full"><Image src={bulb} alt="Bulb" class="size-5" />New Feature</p>
-    <p class="text-[26px] leading-snug font-bold mt-5">All in one platform for enhanced control</p>
-    <p class="pr-5 mt-3">This innovative concept strives to streamline operations to the providing users with heightened efficiency and convenience by eliminating the need to navigate.</p>
-    <div class="mt-10 flex flex-col gap-y-10 pr-5">
-        {
-            newFeature.map((n) => (
-                <div class="flex flex-col gap-y-3">
-                    {
-                        n.icon === Checklist ? (
-                            <div class="size-14 p-3 rounded-full shadow-sm select-none pointer-events-none" style={{ background: n.color }}>
-                                <Checklist />
-                            </div>
-                        ) : (
-                            <div class="size-14 p-3 rounded-full shadow-sm select-none pointer-events-none" style={{ background: n.color }}>
-                                <Clock />
-                            </div>
-                        )
-                    }
-                    <p class="font-semibold">{n.title}</p>
-                    <p>{n.description}</p>
-                </div>
-            ))
-        }
-    </div>
-    <div class="mt-10 flex flex-col w-full gap-y-3 select-none pointer-events-none">
-        <div class="flex items-end justify-center gap-x-3">
-            <Image class="w-28 shadow-sm" src={task} alt="Running task" />
-            <Image class="w-44 shadow-sm" src={example} alt="Task visualization example" />
+<section class="my-10 py-6 min-[600px]:py-10 bg-warm mx-4 min-[500px]:mx-10 min-[700px]:mx-16 min-[800px]:mx-24 lg:mx-0 xl:mx-24 2xl:mx-52 4xl:mx-96 min-[2350px]:mx-[480px] px-8 min-[500px]:px-12 min-[700px]:px-16 lg:px-8 rounded-[20px] lg:flex items-center max-2xl:gap-x-12 flex-row-reverse xl:text-lg">
+    <div>
+        <p class="flex items-center text-lg gap-x-1 bg-white w-fit border-2 border-gray-100 shadow-sm py-1 px-3 rounded-full"><Image src={bulb} alt="Bulb" class="size-5" />New Feature</p>
+        <p class="text-3xl min-[850px]:text-4xl leading-snug min-[850px]:leading-tight font-bold mt-5">All in one platform for enhanced control</p>
+        <p class="pr-5 mt-3 2xl:text-xl">This innovative concept strives to streamline operations to the providing users with heightened efficiency and convenience by eliminating the need to navigate.</p>
+        <div class="mt-10 flex flex-col gap-y-10 pr-5 2xl:text-xl">
+            {
+                newFeature.map((n) => (
+                    <div class="flex flex-col gap-y-3">
+                        {
+                            n.icon === Checklist ? (
+                                <div class="size-14 p-3 rounded-full shadow-sm select-none pointer-events-none" style={{ background: n.color }}>
+                                    <Checklist />
+                                </div>
+                            ) : (
+                                <div class="size-14 p-3 rounded-full shadow-sm select-none pointer-events-none" style={{ background: n.color }}>
+                                    <Clock />
+                                </div>
+                            )
+                        }
+                        <p class="font-semibold">{n.title}</p>
+                        <p>{n.description}</p>
+                    </div>
+                ))
+            }
         </div>
-        <Image class="shadow-sm" src={activity} alt="Activity" />
     </div>
-</section>
+    <div class="mt-10 flex flex-col items-center w-full gap-y-3 select-none pointer-events-none">
+        <div class="flex items-end justify-center gap-x-3">
+            <Image class="w-28 min-[600px]:w-48 min-[850px]:w-64 lg:w-48 3xl:w-64" src={task} alt="Running task" />
+            <Image class="w-44 min-[600px]:w-60 min-[850px]:w-80 lg:w-52 3xl:w-72" src={example} alt="Task visualization example" />
+        </div>
+        <Image class="w-[300px] min-[600px]:w-[440px] min-[850px]:w-[600px] lg:w-[405px] 3xl:w-[550px]" src={activity} alt="Activity" />
+    </div>
+</section> 
