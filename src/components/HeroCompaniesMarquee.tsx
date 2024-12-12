@@ -4,7 +4,7 @@ import "@devnomic/marquee/dist/index.css";
 
 export const HeroCompaniesMarquee = () => {
   return (
-    <div className="my-5 px-3">
+    <div className="my-5 px-3" data-aos="fade-up" data-aos-delay="500">
       <Marquee fade={true} numberOfCopies={4} className="[--duration:20s] h-[70px] lg:h-[90px] xl:h-[110px] flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"

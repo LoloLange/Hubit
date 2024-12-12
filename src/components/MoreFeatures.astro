@@ -14,17 +14,17 @@ import { MoreFeaturesMarquee } from './MoreFeaturesMarquee'
 ---
 
 <section class="flex flex-col items-center mx-10 min-[500px]:mx-20 min-[700px]:mx-32 min-[800px]:mx-40 lg:mx-32 min-[1200px]:mx-44 2xl:mx-56 3xl:w-[1000px] 3xl:mx-auto my-20">
-    <p class="border-2 border-gray-100 bg-warm py-1 px-3 w-fit rounded-full">More features</p>
-    <p class="text-3xl font-bold text-center my-8">Unlock key features to achieve higher productivity</p>
+    <p class="border-2 border-gray-100 bg-warm py-1 px-3 w-fit rounded-full" data-aos="fade-up" data-aos-delay="500">More features</p>
+    <p class="text-3xl font-bold text-center my-8" data-aos="fade-up" data-aos-delay="1000">Unlock key features to achieve higher productivity</p>
     <div class="flex flex-col gap-8 xl:gap-12">
-        <div class="flex max-lg:flex-col gap-8 xl:gap-12">
+        <div class="flex max-lg:flex-col gap-8 xl:gap-12" data-aos="fade-up" data-aos-delay="1000">
             <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 shadow-sm lg:w-[70%]">
                 <p class="font-semibold text-2xl 2xl:text-3xl">Create unlimited tasks</p>
                 <p class="2xl:text-xl">Progress tracking is a crucial feature in a task management app as it allows users.</p>
                 <Image class="shadow-md select-none pointer-events-none rounded-xl self-center xl:w-[500px] min-[1700px]:w-[600px]" src={tasks} alt="Tasks" />
             </div>
     
-            <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 relative shadow-sm lg:w-[50%]">
+            <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 relative shadow-sm lg:w-[50%]" data-aos="fade-up" data-aos-delay="1000">
                 <p class="font-semibold text-2xl 2xl:text-3xl">Collaborate on tasks</p>
                 <div class="bg-white shadow-sm rounded-xl my-2 p-5 w-full h-[220px] select-none pointer-events-none">
                     <Image class="w-36 absolute top-26" src={user1} alt="user1" />
@@ -39,13 +39,13 @@ import { MoreFeaturesMarquee } from './MoreFeaturesMarquee'
         </div>
 
         <div class="flex max-lg:flex-col gap-8 xl:gap-12">
-            <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 shadow-sm lg:w-[50%] xl:w-[30%] 4xl:w-[50%]">
+            <div class="bg-warm border-[1px] border-gray-100 rounded-xl p-8 flex flex-col gap-y-3 shadow-sm lg:w-[50%] xl:w-[30%] 4xl:w-[50%]" data-aos="fade-up" data-aos-delay="500">
                 <Image class="shadow-sm flex select-none pointer-events-none rounded-xl" src={progress} alt="progress bars" />
                 <p class="font-semibold text-2xl 2xl:text-3xl mt-3">Progress Tracking</p>
                 <p class="2xl:text-xl">Progress tracking is a crucial feature in a task management app as it allows users.</p>
             </div>
             
-            <div class="bg-warm border-[1px] border-gray-100 rounded-xl flex flex-col items-center justify-center gap-y-3 shadow-sm w-[calc(100vw-80px)] min-[500px]:w-[calc(100vw-160px)] min-[700px]:w-[calc(100vw-256px)] min-[800px]:w-[calc(100vw-384px)] lg:w-[calc(70vw-256px)] min-[1200px]:w-[calc(70vw-352px)] xl:w-[calc(80vw-352px)] 2xl:w-[calc(80vw-448px)] 3xl:w-[calc(80vw-576px)] 4xl:w-[calc(60vw-700px)] overflow-hidden">
+            <div class="bg-warm border-[1px] border-gray-100 rounded-xl flex flex-col items-center justify-center gap-y-3 shadow-sm w-[calc(100vw-80px)] min-[500px]:w-[calc(100vw-160px)] min-[700px]:w-[calc(100vw-256px)] min-[800px]:w-[calc(100vw-384px)] lg:w-[calc(70vw-256px)] min-[1200px]:w-[calc(70vw-352px)] xl:w-[calc(80vw-352px)] 2xl:w-[calc(80vw-448px)] 3xl:w-[calc(80vw-576px)] 4xl:w-[calc(60vw-700px)] overflow-hidden" data-aos="fade-up" data-aos-delay="500">
                 <div>
                     <MoreFeaturesMarquee />
                 </div>

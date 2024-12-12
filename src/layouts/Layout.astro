@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "aos/dist/aos.css";
 ---
 
 <!doctype html>
@@ -20,3 +21,12 @@ import Footer from "../components/Footer.astro";
 		<Footer />
 	</body>
 </html>
+
+<script>
+	import AOS from 'aos';
+	AOS.init({
+		once: true,
+		duration: 1000,
+		easing: 'ease',
+	});
+</script>

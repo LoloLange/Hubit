@@ -55,18 +55,18 @@ export const Pricing = () => {
 
   return (
     <section id="pricing" className="flex flex-col items-center py-16">
-      <p className="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]">
+      <p className="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]" data-aos="fade-up" data-aos-delay="500">
         Pricing & Plans
       </p>
-      <p className="text-3xl lg:text-4xl font-bold text-center my-5 lg:my-8 px-5">
+      <p className="text-3xl lg:text-4xl font-bold text-center my-5 lg:my-8 px-5" data-aos="fade-up" data-aos-delay="1000">
         Explore and choose the perfect plan for your needs
       </p>
-      <div className="flex items-center my-2 lg:my-4">
+      <div className="flex items-center my-2 lg:my-4" data-aos="fade-up" data-aos-delay="1000">
         <span className="mr-2">Monthly</span>
         <div
           className={`relative inline-flex items-center cursor-pointer bg-gray-200 rounded-full w-12 h-6 border-2 border-gray-300`}
           onClick={handleToggle}
-        >
+       >
           <input type="checkbox" className="sr-only" checked={isOn} readOnly />
           <span
             className={`transform transition-transform duration-200 ease-in-out ${
@@ -76,12 +76,12 @@ export const Pricing = () => {
         </div>
         <span className="ml-2">Yearly</span>
       </div>
-      <div className="flex max-md:flex-col md:flex-row gap-6 xl:gap-10 px-5 mt-5">
+      <div className="flex max-md:flex-col md:flex-row gap-6 xl:gap-10 px-5 mt-5" data-aos="fade-up" data-aos-delay="1000">
         {plans.map((p) => (
           <div
             key={p.name}
             className="border-2 border-gray-200 bg-white rounded-2xl max-md:w-[calc(100vw-5rem)] flex flex-col"
-          >
+         >
             <div className="flex flex-col gap-y-1 bg-gray-100 p-3 border-b-2 rounded-t-2xl border-gray-200 relative py-5">
               <p className="font-semibold text-gray-700 xl:text-xl">{p.name}</p>
               {p.isPopular && (
@@ -113,7 +113,7 @@ export const Pricing = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                  >
+                 >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M5 12l5 5l10 -10" />
                   </svg>

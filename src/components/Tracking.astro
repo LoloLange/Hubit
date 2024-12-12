@@ -8,12 +8,12 @@ const checks = ["Task progress visualization", "Project milestones", "Checklists
 
 ---
 
-<section class="py-10 bg-warm mx-5 min-[500px]:mx-10 min-[700px]:mx-16 min-[800px]:mx-24 lg:mx-0 xl:mx-24 2xl:mx-52 4xl:mx-96 min-[2350px]:mx-[450px] min-[2500px]:mx-[550px] mt-10 rounded-[50px] px-8 2xl:px-10 min-[500px]:px-12 min-[700px]:px-16 lg:px-8 lg:flex items-center gap-x-16 flex-row-reverse">
+<section class="py-10 bg-warm mx-5 min-[500px]:mx-10 min-[700px]:mx-16 min-[800px]:mx-24 lg:mx-0 xl:mx-24 2xl:mx-52 4xl:mx-96 min-[2350px]:mx-[450px] min-[2500px]:mx-[550px] mt-10 rounded-[50px] px-8 2xl:px-10 min-[500px]:px-12 min-[700px]:px-16 lg:px-8 lg:flex items-center gap-x-16">
     <div class="3xl:w-[50%]">
-        <p class="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]">Track everything</p>
-        <p class="text-3xl font-bold mt-3">Monitor workflow with progress tracking</p>
-        <p class="mt-3 pr-5 2xl:text-xl">This innovative concept strives to streamline operations to the providing users with heightened efficiency and convenience by eliminating the need to navigate.</p>
-        <div class="flex flex-col gap-y-5 my-5 3xl:text-xl">
+        <p class="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]" data-aos="fade-up" data-aos-delay="500">Track everything</p>
+        <p class="text-3xl font-bold mt-3" data-aos="fade-up" data-aos-delay="1000">Monitor workflow with progress tracking</p>
+        <p class="mt-3 pr-5 2xl:text-xl" data-aos="fade-up" data-aos-delay="1500">This innovative concept strives to streamline operations to the providing users with heightened efficiency and convenience by eliminating the need to navigate.</p>
+        <div class="flex flex-col gap-y-5 my-5 3xl:text-xl" data-aos="fade-up" data-aos-delay="2000">
         {
             checks.map((c) => (
                 <div class="flex gap-x-2 items-center">
@@ -25,11 +25,11 @@ const checks = ["Task progress visualization", "Project milestones", "Checklists
             ))
         }
         </div>
-        <button class="border-gray-200 border-[1px] w-fit px-5 py-3 rounded-2xl bg-black text-white shadow-md mt-5 hover:-translate-y-1 duration-300">Start 14 Days Free Trial 
+        <button class="border-gray-200 border-[1px] w-fit px-5 py-3 rounded-2xl bg-black text-white shadow-md mt-5 hover:-translate-y-1 duration-300" data-aos="fade-up" data-aos-delay="2000">Start 14 Days Free Trial 
         </button>
     </div>
     <div class="flex flex-col mt-10 gap-y-3 px-7 select-none pointer-events-none">
-        <Image src={profile} alt="Profile example" />
-        <Image src={profileProg} alt="Profile progress visualization example" />
+        <Image src={profile} alt="Profile example" data-aos="zoom-in" data-aos-delay="500"  />
+        <Image src={profileProg} alt="Profile progress visualization example" data-aos="zoom-in" data-aos-delay="1000"  />
     </div>
 </section>
