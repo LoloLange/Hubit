@@ -1,10 +1,39 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
-import icon from '../assets/hero/hamburger-icon.svg'
+import icon from '../assets/hero/hamburger-icon.svg';
+
+const navbarSections: string[] = ["Features", "Pricing", "Reviews"];
 ---
 
-<header class="h-20 flex justify-between items-center p-5 select-none">
-    <Image class="pointer-events-none" src={logo} alt="hubit logo" />
-    <Image src={icon} alt="hamburguer icon" />
+<header id="home" class="h-20 flex justify-between items-center p-5 select-none min-[475px]:mx-2 min-[500px]:mx-5">
+    <Image class="pointer-events-none max-[370px]:w-[85px] max-[400px]:w-[100px] max-[430px]:w-[110px]" src={logo} alt="hubit logo" />
+    <nav>
+        <ul class="flex items-center gap-x-3 min-[450px]:gap-x-5 min-[600px]:gap-x-10">
+            {
+                navbarSections.map((section) => (
+                    <li id="sections" class="text-sm min-[375px]:text-base min-[400px]:text-lg 3xl:text-xl font-medium cursor-pointer border-transparent border-b-2 hover:border-b-coral mt-1 duration-500">
+                        {section}
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
 </header>
+
+<script>
+    const sections = document.querySelectorAll('#sections');
+    sections.forEach((section) => {
+        section.addEventListener('click', () => {
+            const sectionName = section.innerHTML.toLowerCase().replaceAll(' ', '');
+            const targetSection = document.getElementById(sectionName);
+            if(targetSection) {
+                const targetOffset = targetSection.offsetTop - (sectionName === 'features' ? 80 : 0);
+                window.scrollTo({
+                    top: targetOffset,
+                    behavior: "smooth",
+                });
+            }
+        })
+    })
+</script>

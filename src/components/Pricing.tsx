@@ -54,7 +54,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center py-16">
+    <section id="pricing" className="flex flex-col items-center py-16">
       <p className="border-2 border-gray-100 bg-white py-1 px-3 w-fit rounded-[50px]">
         Pricing & Plans
       </p>
@@ -122,7 +122,7 @@ export const Pricing = () => {
               ))}
             </div>
             <div className="px-5 md:px-3 lg:px-5 flex flex-col gap-y-3 mt-auto my-6">
-              <button className="border-gray-200 border-[1px] py-2.5 rounded-2xl md:rounded-lg xl:rounded-2xl bg-black text-white shadow-md w-full">
+              <button className="border-gray-200 border-[1px] py-2.5 rounded-2xl md:rounded-lg xl:rounded-2xl bg-black text-white shadow-md w-full hover:-translate-y-1 duration-300">
                 Start 30 Days Free Trial
               </button>
             </div>
